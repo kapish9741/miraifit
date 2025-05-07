@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.31.1",
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.5",
     "framer-motion": "^12.10.0",
     "gsap": "^3.13.0",

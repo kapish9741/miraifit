@@ -17,7 +17,7 @@ const Header = () => {
       <h1 className="text-2xl font-bold bg-gradient-to-br from-neutral-500 via-neutral-200 to-neutral-950 bg-clip-text text-transparent hover:from-neutral-200 hover:via-neutral-500 hover:to-neutral-950 transition-colors cursor-pointer"><Link to="/">MiraiFit</Link></h1>
 
       <ul className="hidden md:flex gap-6 font-medium text-neutral-400">
-        <li><Link to="/ai">AI</Link></li>
+        <li><Link to="/ai">Ai</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/blog">Blog</Link></li>
         <li><Link to="/contact">Contact</Link></li>
