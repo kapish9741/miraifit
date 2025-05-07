@@ -1,0 +1,16 @@
+import React from "react";
+import Lander from '../components/layout/Lander.jsx';
+import WhyChooseUs from "../components/layout/WhyChooseUs.jsx";
+import CalorieCounter from '../components/layout/CalorieCounter.jsx'
+
+const Home = () => {
+  return (
+    <>
+        <section className="w-screen h-screen flex flex-col items-center justify-center pb-20"><Lander /></section>
+        <section className="w-screen h-screen flex flex-col items-center justify-center"><WhyChooseUs /></section>
+        <section className="w-screen h-screen flex flex-col items-center justify-center"><CalorieCounter /></section>
+    </>
+  );
+};
+
+export default Home;
