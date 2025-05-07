@@ -17,11 +17,19 @@ const Lander = () => {
             Transform Your Fitness Journey With AI-Powered Guidance
             </motion.h1>
 
-            <p className="text-lg md:text-xl text-neutral-400 mb-8">
+            <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-lg md:text-xl text-neutral-400 mb-8">
             ApexFitness uses advanced AI to create personalized workout and meal plans tailored to your unique goals and preferences.
-            </p>
+            </motion.p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col sm:flex-row gap-4">
             <button className="uiverse-button-a">
                 <MoveRight />
                 <div className="text">Get Started</div>
@@ -30,7 +38,7 @@ const Lander = () => {
             <button className="px-6 py-3 rounded-lg border border-neutral-100 text-neutral-100 hover:bg-neutral-300 hover:text-neutral-950 transition-colors cursor-pointer">
                 Learn More
             </button>
-            </div>
+            </motion.div>
         </div>
 
         <div className="w-full lg:w-1/2 flex justify-center items-center lg:mt-0">
