@@ -21,7 +21,7 @@ const Lander = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-lg md:text-xl text-neutral-400 mb-8">
+            className="text-lg md:text-xl text-neutral-400 mb-6">
             ApexFitness uses advanced AI to create personalized workout and meal plans tailored to your unique goals and preferences.
             </motion.p>
 
