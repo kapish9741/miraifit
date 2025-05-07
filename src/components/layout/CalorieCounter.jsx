@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
-import NutritionCards from '../cards/nutritionCards';
+import NutritionCards from '../cards/NutritionCards.jsx';
 import {Wheat, Pizza, EggFried, Ham} from 'lucide-react'
 
 const CalorieCounter = () => {
