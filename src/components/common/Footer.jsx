@@ -37,7 +37,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Subscribe */}
         <div>
           <h3 className="text-white font-semibold mb-3">Subscribe</h3>
           <p className="text-sm mb-4">

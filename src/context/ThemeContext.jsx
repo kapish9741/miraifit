@@ -14,10 +14,6 @@ export const ThemeProvider = ({ children }) => {
     setIsDarkMode(prefersDark);
   }, []);
 
-  useEffect(() => {
-    document.body.classList.toggle('dark-theme', isDarkMode);
-  }, [isDarkMode]);
-
   const toggleTheme = () => {
     setIsDarkMode(prev => !prev);
   };
