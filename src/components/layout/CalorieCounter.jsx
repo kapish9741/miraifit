@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
+import NutritionCards from '../cards/nutritionCards';
+import {Wheat, Pizza, EggFried, Ham} from 'lucide-react'
 
 const CalorieCounter = () => {
   const [query, setQuery] = useState('');
@@ -37,29 +39,45 @@ const CalorieCounter = () => {
   };
 
   return (
-    <div className="p-6 bg-white rounded-xl shadow-md max-w-md mx-auto mt-10">
-      <h2 className="text-xl font-semibold mb-4">Nutrition Search</h2>
+    <div className='w-full h-full flex flex-col items-center justify-center gap-10'>
+    <div className="p-6 w-1/2 bg-neutral-950 border-2 border-neutral-800 rounded-xl shadow-md max-w-md mx-auto mt-10">
+      <h2 className="text-xl font-semibold mb-4 text-neutral-100">Nutrition Search</h2>
       <input
         type="text"
         placeholder="e.g. 1 apple"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="border border-gray-300 rounded px-3 py-2 w-full mb-4"
+        className="border border-gray-300 rounded px-3 py-2 w-full mb-4 focus:outline-4 focus:outline-blue-700 text-neutral-100"
       />
       <button
         onClick={fetchNutrition}
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        className="bg-blue-600 text-neutral-100 px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
       >
         Search
       </button>
-
-      {result && (
-        <div className="mt-6">
-          <h3 className="font-bold text-lg mb-2">{result.food_name}</h3>
-          <p>Calories: {result.nf_calories}</p>
-          <p>Protein: {result.nf_protein}g</p>
-          <p>Carbs: {result.nf_total_carbohydrate}g</p>
-          <p>Fat: {result.nf_total_fat}g</p>
+    </div>
+    {result && (
+        <div className="flex flex-row gap-10 justify-center items-center">
+          <NutritionCards 
+          icon={<Ham />}
+          title={'Calories'}
+          description={result.nf_calories}
+          />
+          <NutritionCards 
+          icon={<EggFried />}
+          title={'Protein'}
+          description={result.nf_protein}
+          />
+          <NutritionCards 
+          icon={<Wheat />}
+          title={'Carbs'}
+          description={result.nf_total_carbohydrate}
+          />
+          <NutritionCards 
+          icon={<Pizza />}
+          title={'Fat'}
+          description={result.nf_total_fat}
+          />
         </div>
       )}
     </div>

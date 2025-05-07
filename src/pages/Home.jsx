@@ -6,9 +6,9 @@ import CalorieCounter from '../components/layout/CalorieCounter.jsx'
 const Home = () => {
   return (
     <>
-        <section className="w-screen h-screen flex flex-col items-center justify-center pb-20"><Lander /></section>
-        <section className="w-screen h-screen flex flex-col items-center justify-center"><WhyChooseUs /></section>
-        <section className="w-screen h-screen flex flex-col items-center justify-center"><CalorieCounter /></section>
+        <section className="w-screen h-[90vh] flex flex-col items-center justify-center pb-20"><Lander /></section>
+        <section className="w-screen h-[60vh] flex flex-col items-center justify-center"><WhyChooseUs /></section>
+        <section className="w-screen h-[90vh] flex flex-col items-center justify-center"><CalorieCounter /></section>
     </>
   );
 };
