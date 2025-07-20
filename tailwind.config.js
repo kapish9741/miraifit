@@ -22,6 +22,13 @@ export default {
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
+        'marquee-vertical': 'marquee-vertical var(--duration, 40s) linear infinite',
+      },
+      keyframes: {
+        'marquee-vertical': {
+          '0%': { transform: 'translateY(0%)' },
+          '100%': { transform: 'translateY(-50%)' }, // adjust based on content/repeat
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -29,4 +36,4 @@ export default {
     },
   },
   plugins: [],
-} 
+}
