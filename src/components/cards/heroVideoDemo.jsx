@@ -70,7 +70,7 @@ export default function HeroVideoDialog({
           alt={thumbnailAlt}
           width={1920}
           height={1080}
-          className="w-full rounded-md border border-neutral-600 shadow-lg transition-all duration-200 ease-out group-hover:brightness-[0.6] group-hover:blur-[2px]"
+          className="w-full rounded-2xl border border-neutral-600 shadow-lg transition-all duration-200 ease-out group-hover:brightness-[0.6] group-hover:blur-[2px]"
         />
         <div className="absolute inset-0 flex scale-[0.9] items-center justify-center rounded-2xl transition-all duration-200 ease-out group-hover:scale-100">
           <div className="flex size-28 items-center justify-center rounded-full bg-neutral-100/10 backdrop-blur-md">

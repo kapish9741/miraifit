@@ -5,6 +5,7 @@ import CalorieCounter from '../components/layout/CalorieCounter.jsx'
 import HeroVideo from '../components/layout/HeroVideo.jsx'
 import Tweet from '../components/layout/Tweet.jsx'
 import MarqueeDemoVertical from '../components/layout/MarqueeDemoVertical.jsx'
+import Pricing from '../components/layout/Pricing.jsx'
 
 const Home = () => {
   return (
@@ -17,6 +18,11 @@ const Home = () => {
         <section className="text-2xl md:text-4xl font-extrabold bg-gradient-to-b from-neutral-200 via-neutral-100 to-neutral-300 bg-clip-text text-transparent w-screen pt-[10vh] pb-[1vh] flex flex-col items-center justify-center">Join 2,000+ Happy Users Transforming Their Lives.</section>
         <section className="text-sm md:text-xl font-medium text-neutral-500 w-screen flex flex-col items-center justify-center"><div className="w-[90vw] flex items-center justify-center text-center">From weight loss to muscle gain, our AI-crafted meal and workout plans are helping real people hit real goals faster and smarter.</div></section>
         <section className="w-screen py-[10vh] flex flex-col items-center justify-center"><MarqueeDemoVertical /></section>
+        <section className="text-2xl md:text-4xl font-extrabold bg-gradient-to-b from-neutral-200 via-neutral-100 to-neutral-300 bg-clip-text text-transparent w-screen pt-[10vh] pb-[1vh] flex flex-col items-center justify-center">Plans That Flex With You</section>
+        <section className="text-sm md:text-xl font-medium text-neutral-500 w-screen flex flex-col items-center justify-center"><div className="w-[90vw] flex items-center justify-center text-center">From goal-setting to custom training and nutrition — start free, upgrade only when you're seeing real progress.</div></section>
+        <section className="w-screen py-[10vh] flex flex-col items-center justify-center"><Pricing /></section>
+        <section className="text-2xl md:text-4xl font-extrabold bg-gradient-to-b from-neutral-200 via-neutral-100 to-neutral-300 bg-clip-text text-transparent w-screen pt-[10vh] pb-[1vh] flex flex-col items-center justify-center">Know Exactly What You’re Eating</section>
+        <section className="text-sm md:text-xl font-medium text-neutral-500 w-screen flex flex-col items-center justify-center"><div className="w-[90vw] flex items-center justify-center text-center">From calories to protein and more — get accurate food breakdowns powered by trusted nutrition data.</div></section>
         <section className="w-screen py-[10vh] flex flex-col items-center justify-center"><CalorieCounter /></section>
     </>
   );

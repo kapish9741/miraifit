@@ -87,7 +87,13 @@ const reviews = [
   {
     name: "Stephen Jerry",
     username: "@stephen",
-    body: "Perfect for busy people. The AI takes care of all the planning — I just show up.",
+    body: "Perfect for busy people. The AI takes care of all the planning I just show up.",
+    img: "https://avatar.vercel.sh/stephen",
+  },
+  {
+    name: "Vansh Rana",
+    username: "@Vansh",
+    body: "Its very intuitive has real nice informative tutorials. I really like it.",
     img: "https://avatar.vercel.sh/stephen",
   },
 ];

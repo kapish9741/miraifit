@@ -47,7 +47,7 @@ const CalorieCounter = () => {
         placeholder="e.g. 1 apple"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="border border-gray-600 rounded px-3 py-2 w-full mb-4 focus:outline-2 focus:outline-blue-700 text-neutral-100"
+        className="border bg-neutral-900 border-neutral-600 rounded px-3 py-2 w-full mb-4 focus:outline-1 focus:outline-neutral-100 text-neutral-100"
       />
       <button
         onClick={fetchNutrition}
