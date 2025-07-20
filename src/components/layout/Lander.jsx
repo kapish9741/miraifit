@@ -7,7 +7,7 @@ import AnimatedCard from '../cards/AnimatedCard'
 const Lander = () => {
   return (
     <>
-        <div className="flex flex-col gap-20 lg:flex-row w-full min-h-[70vh] items-center px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
+        <div className="flex flex-col gap-20 lg:flex-row w-full min-h-[60vh] items-center px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
         <div className="w-full lg:w-1/2 flex flex-col items-center text-center lg:text-left lg:items-start">
             <motion.h1
             initial={{ opacity: 0, y: 20 }}

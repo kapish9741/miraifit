@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import NutritionCards from '../cards/NutritionCards.jsx';
-import {Wheat, Pizza, EggFried, Ham} from 'lucide-react'
+import {Wheat, Pizza, EggFried, Flame} from 'lucide-react'
 
 const CalorieCounter = () => {
   const [query, setQuery] = useState('');
@@ -59,22 +59,22 @@ const CalorieCounter = () => {
     {result && (
         <div className="flex flex-row gap-10 justify-center items-center">
           <NutritionCards 
-          icon={<Ham />}
+          icon={<Flame className="w-6 h-6" />}
           title={'Calories'}
           description={result.nf_calories}
           />
           <NutritionCards 
-          icon={<EggFried />}
+          icon={<EggFried className="w-6 h-6" />}
           title={'Protein'}
           description={result.nf_protein}
           />
           <NutritionCards 
-          icon={<Wheat />}
+          icon={<Wheat className="w-6 h-6" />}
           title={'Carbs'}
           description={result.nf_total_carbohydrate}
           />
           <NutritionCards 
-          icon={<Pizza />}
+          icon={<Pizza className="w-6 h-6" />}
           title={'Fat'}
           description={result.nf_total_fat}
           />

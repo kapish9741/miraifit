@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -7,7 +8,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         
         <div>
-          <h2 className="text-neutral-100 text-xl font-semibold">ApexFitness</h2>
+          <h2 className="text-neutral-100 text-xl font-semibold">MiraiFit</h2>
           <p className="mt-2 text-sm">
             Transforming fitness journeys with AI-powered personalized workout and meal plans.
           </p>
@@ -21,19 +22,19 @@ function Footer() {
         <div>
           <h3 className="text-neutral-100 font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm text-neutral-400">
-            <li><a href="#" className="hover:text-neutral-100">Home</a></li>
-            <li><a href="#" className="hover:text-neutral-100">AI Assistant</a></li>
-            <li><a href="#" className="hover:text-neutral-100">Blog</a></li>
-            <li><a href="#" className="hover:text-neutral-100">About</a></li>
+            <li><Link to="/" className="hover:text-neutral-100">Home</Link></li>
+            <li><Link to="/ai" className="hover:text-neutral-100">AI Assistant</Link></li>
+            <li><Link to="/blog" className="hover:text-neutral-100">Blog</Link></li>
+            <li><Link to="/about" className="hover:text-neutral-100">About</Link></li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-neutral-100 font-semibold mb-3">Legal</h3>
           <ul className="space-y-2 text-sm neutral-400">
-            <li><a href="#" className="hover:text-neutral-100">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-neutral-100">Terms of Service</a></li>
-            <li><a href="#" className="hover:text-neutral-100">Cookie Policy</a></li>
+            <li><Link to="/privacy" className="hover:text-neutral-100">Privacy Policy</Link></li>
+            <li><Link to="/terms" className="hover:text-neutral-100">Terms of Service</Link></li>
+            <li><Link to="/cookies" className="hover:text-neutral-100">Cookie Policy</Link></li>
           </ul>
         </div>
 

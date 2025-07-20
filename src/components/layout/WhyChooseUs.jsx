@@ -1,6 +1,6 @@
 import React from 'react';
 import FeatureCard from '../cards/features';
-import {Brain, Dumbbell, Utensils, Clock, ChartNoAxesColumnIncreasing, CircleUser} from 'lucide-react';
+import {Brain, Dumbbell, Utensils, Clock, BarChart3, CircleUser} from 'lucide-react';
 const WhyChooseUs = () => {
   const features = [
     {
@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
       description: 'Optimize your workouts to fit your schedule and maximize results.'
     },
     {
-      icon: <ChartNoAxesColumnIncreasing className="w-10 h-10" />,
+      icon: <BarChart3 className="w-10 h-10" />,
       title: 'Progress Tracking',
       description: 'Monitor your fitness journey with detailed progress analytics.'
     },
