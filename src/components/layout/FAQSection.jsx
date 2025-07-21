@@ -64,9 +64,6 @@ export default function FAQSection() {
 
   return (
     <div className="bg-black text-white px-6 py-12 w-full max-w-5xl mx-auto">
-      <h2 className="text-3xl font-bold text-neutral-200 mb-8">
-        Frequently Asked Questions
-      </h2>
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div key={index} className="border-b border-neutral-700 py-4">

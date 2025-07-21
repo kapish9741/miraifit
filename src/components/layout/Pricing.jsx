@@ -11,7 +11,7 @@ const FreePrice = [
 ]
 
 const ProPrice = [
-    'Advanced AI plan customization (allergies, macros, preferences)',
+    'Advanced AI plan customization',
     'Smart progress insights',
     'Habit nudges',
     'Integration with wearables',
