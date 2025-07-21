@@ -12,12 +12,12 @@ import { Toaster } from 'react-hot-toast';
 
 const Layout = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative">
       <Toaster position="top-center" />
       <header className='sticky top-4 w-screen z-50'>
         <Header />
       </header>
-      <main className="flex-grow">
+      <main className="flex-grow relative">
         <Outlet />
       </main>
       <footer>
