@@ -10,7 +10,7 @@ const AnimatedCard = () => {
           <div className="line bottoml"></div>
           <div className="line leftl"></div>
           <div className="line rightl"></div>
-          <div className="text">2000+</div>
+          <div className="text">10K+</div>
           <div className="text-2xl bg-gradient-to-tr from-neutral-700 via-neutral-100 to-neutral-300 bg-clip-text text-transparent">users</div>
         </div>
       </div>
