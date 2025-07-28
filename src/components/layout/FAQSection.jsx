@@ -51,7 +51,7 @@ const faqs = [
   {
     question: "Do I need to pay to get started?",
     answer:
-      "Nope! You can start with our free plan and upgrade only when you’re ready for more features like custom AI plans and wearable integration.",
+      "Nope! You can start with our free plan and upgrade only when you're ready for more features like custom AI plans and wearable integration.",
   },
 ];
 
@@ -63,21 +63,21 @@ export default function FAQSection() {
   };
 
   return (
-    <div className="bg-black text-white px-6 py-12 w-full max-w-5xl mx-auto">
-      <div className="space-y-4">
+    <div className="bg-black text-white px-4 sm:px-6 lg:px-8 py-8 sm:py-12 w-full max-w-5xl mx-auto">
+      <div className="space-y-3 sm:space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="border-b border-neutral-700 py-4">
+          <div key={index} className="border-b border-neutral-700 py-3 sm:py-4">
             <button
               onClick={() => toggleFAQ(index)}
               className="flex justify-between items-center w-full text-left"
             >
-              <span className="text-lg font-medium text-neutral-300">
+              <span className="text-base sm:text-lg font-medium text-neutral-300 pr-4">
                 {faq.question}
               </span>
               {openIndex === index ? (
-                <Minus className="text-blue-500" size={20} />
+                <Minus className="text-blue-500 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
               ) : (
-                <Plus className="text-blue-500" size={20} />
+                <Plus className="text-blue-500 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
               )}
             </button>
 
@@ -90,7 +90,7 @@ export default function FAQSection() {
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3, ease: 'easeInOut' }}
                 >
-                  <p className="mt-3 text-sm text-neutral-400">
+                  <p className="mt-3 text-sm sm:text-base text-neutral-400 leading-relaxed">
                     {faq.answer}
                   </p>
                 </motion.div>

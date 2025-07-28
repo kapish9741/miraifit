@@ -21,25 +21,25 @@ const reviews = [
   {
     name: "Avneet Singh",
     username: "@avneet",
-    body: "Didn’t expect it to be this good. The suggestions are on point, every single time.",
+    body: "Didn't expect it to be this good. The suggestions are on point, every single time.",
     img: "https://avatar.vercel.sh/avneet",
   },
   {
     name: "Mir Ahemd",
     username: "@mir",
-    body: "It’s like having a personal coach and nutritionist in my pocket. Love it!",
+    body: "It's like having a personal coach and nutritionist in my pocket. Love it!",
     img: "https://avatar.vercel.sh/mir",
   },
   {
     name: "Neel Shah",
     username: "@neel",
-    body: "Great UI, smooth experience, and solid results. I’ve never felt more motivated.",
+    body: "Great UI, smooth experience, and solid results. I've never felt more motivated.",
     img: "https://avatar.vercel.sh/neel",
   },
   {
     name: "Prem Patel",
     username: "@prem",
-    body: "Honestly, I was skeptical, but this actually works. I’m already seeing changes.",
+    body: "Honestly, I was skeptical, but this actually works. I'm already seeing changes.",
     img: "https://avatar.vercel.sh/prem",
   },
   {
@@ -51,7 +51,7 @@ const reviews = [
   {
     name: "Haroon Tariq",
     username: "@haroon",
-    body: "This keeps me consistent. I’ve finally found something that sticks with me.",
+    body: "This keeps me consistent. I've finally found something that sticks with me.",
     img: "https://avatar.vercel.sh/haroon",
   },
   {
@@ -81,7 +81,7 @@ const reviews = [
   {
     name: "Max Haxx",
     username: "@max",
-    body: "It’s slick, accurate, and easy to follow. Couldn’t ask for more.",
+    body: "It's slick, accurate, and easy to follow. Couldn't ask for more.",
     img: "https://avatar.vercel.sh/max",
   },
   {
@@ -103,21 +103,20 @@ const ReviewCard = ({ img, name, username, body }) => {
   return (
     <figure
       className={classNames(
-        "w-[22vw] max-w-[25vw] mb-4 cursor-pointer overflow-hidden rounded-xl border p-4",
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        "w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1rem)] xl:w-[calc(20%-1rem)] mb-4 cursor-pointer overflow-hidden rounded-xl border p-3 sm:p-4",
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]"
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img className="rounded-full w-6 h-6 sm:w-8 sm:h-8" alt="" src={img} />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium text-neutral-100">
+          <figcaption className="text-xs sm:text-sm font-medium text-neutral-100">
             {name}
           </figcaption>
           <p className="text-xs font-medium text-neutral-400">{username}</p>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm text-neutral-100">{body}</blockquote>
+      <blockquote className="mt-2 text-xs sm:text-sm text-neutral-100">{body}</blockquote>
     </figure>
   );
 };
@@ -131,26 +130,41 @@ export default function MarqueeDemoVertical() {
   ];
 
   return (
-    <div className="relative flex h-[70vh] w-full justify-center overflow-hidden bg-black">
-      {columns.map((col, idx) => (
-        <div key={idx} className="w-[25vw] max-w-[25vw]">
-          <Marquee
-            pauseOnHover
-            vertical
-            reverse={idx % 2 !== 0}
-            className="[--duration:25s]"
-          >
-            {col.map((review, i) => (
-              <ReviewCard key={review.username + i} {...review} />
-            ))}
-          </Marquee>
-        </div>
-      ))}
+    <div className="relative flex h-[50vh] sm:h-[60vh] md:h-[70vh] w-full justify-center overflow-hidden bg-black">
+      {/* Mobile Layout - Single Column */}
+      <div className="md:hidden w-full px-4">
+        <Marquee
+          pauseOnHover
+          className="[--duration:30s]"
+        >
+          {reviews.map((review, i) => (
+            <ReviewCard key={review.username + i} {...review} />
+          ))}
+        </Marquee>
+      </div>
+
+      {/* Desktop Layout - Three Columns */}
+      <div className="hidden md:flex w-full">
+        {columns.map((col, idx) => (
+          <div key={idx} className="w-1/3 px-2">
+            <Marquee
+              pauseOnHover
+              vertical
+              reverse={idx % 2 !== 0}
+              className="[--duration:25s]"
+            >
+              {col.map((review, i) => (
+                <ReviewCard key={review.username + i} {...review} />
+              ))}
+            </Marquee>
+          </div>
+        ))}
+      </div>
 
       {/* Top Blur */}
-      <div className="pointer-events-none absolute top-0 left-0 h-24 w-full bg-gradient-to-b from-black/80 to-transparent backdrop-blur-sm z-10" />
+      <div className="pointer-events-none absolute top-0 left-0 h-12 sm:h-24 w-full bg-gradient-to-b from-black/80 to-transparent backdrop-blur-sm z-10" />
       {/* Bottom Blur */}
-      <div className="pointer-events-none absolute bottom-[-1px] left-0 h-24 w-full bg-gradient-to-t from-black/80 to-transparent backdrop-blur-sm z-10" />
+      <div className="pointer-events-none absolute bottom-[-1px] left-0 h-12 sm:h-24 w-full bg-gradient-to-t from-black/80 to-transparent backdrop-blur-sm z-10" />
     </div>
   );
 }

@@ -46,26 +46,26 @@ const sponsors = [
 
 export default function SponsorsSection() {
   return (
-    <div className="bg-black py-16 overflow-hidden relative">
-      <h2 className="text-center text-3xl font-bold text-neutral-300 mb-10">
+    <div className="bg-black py-8 sm:py-12 lg:py-16 overflow-hidden relative">
+      <h2 className="text-center text-2xl sm:text-3xl font-bold text-neutral-300 mb-6 sm:mb-8 lg:mb-10 px-4">
         Our Sponsors
       </h2>
 
       <div className="relative w-full overflow-x-hidden">
         {/* Left blur shadow */}
-        <div className="absolute top-0 left-0 h-full w-40 z-20 pointer-events-none">
+        <div className="absolute top-0 left-0 h-full w-20 sm:w-32 lg:w-40 z-20 pointer-events-none">
           <div className="h-full w-full bg-gradient-to-r from-black via-black/80 to-transparent backdrop-blur-sm" />
           <div className="absolute inset-0 shadow-[inset_-20px_0_40px_rgba(0,0,0,0.8)]" />
         </div>
         
         {/* Right blur shadow */}
-        <div className="absolute top-0 right-0 h-full w-40 z-20 pointer-events-none">
+        <div className="absolute top-0 right-0 h-full w-20 sm:w-32 lg:w-40 z-20 pointer-events-none">
           <div className="h-full w-full bg-gradient-to-l from-black via-black/80 to-transparent backdrop-blur-sm" />
           <div className="absolute inset-0 shadow-[inset_20px_0_40px_rgba(0,0,0,0.8)]" />
         </div>
 
         <motion.div
-          className="flex gap-12 w-max"
+          className="flex gap-6 sm:gap-8 lg:gap-12 w-max px-4 sm:px-6 lg:px-8"
           animate={{ x: ["0%", "-21%"] }}
           transition={{
             repeat: Infinity,
@@ -79,7 +79,7 @@ export default function SponsorsSection() {
               key={index}
               src={sponsor.url}
               alt={sponsor.name}
-              className="h-16 w-auto opacity-80 hover:opacity-100 transition duration-300 brightness-0 invert filter drop-shadow-lg"
+              className="h-8 sm:h-12 lg:h-16 w-auto opacity-80 hover:opacity-100 transition duration-300 brightness-0 invert filter drop-shadow-lg"
             />
           ))}
         </motion.div>

@@ -40,12 +40,19 @@
 
 
 .outer {
-  width: 350px;
-  height: 300px;
+  width: 100%;
+  max-width: 350px;
+  height: 250px;
   border-radius: 10px;
   padding: 1px;
   background: radial-gradient(circle 230px at 0% 0%, #ffffff, #0c0d0d);
   position: relative;
+}
+
+@media (min-width: 640px) {
+  .outer {
+    height: 300px;
+  }
 }
 
 .dot {
@@ -97,8 +104,8 @@
   color: #fff;
 }
 .ray {
-  width: 220px;
-  height: 45px;
+  width: 180px;
+  height: 35px;
   border-radius: 100px;
   position: absolute;
   background-color: #c7c7c7;
@@ -111,12 +118,25 @@
   transform: rotate(40deg);
 }
 
+@media (min-width: 640px) {
+  .ray {
+    width: 220px;
+    height: 45px;
+  }
+}
+
 .card .text {
   font-weight: bolder;
-  font-size: 4rem;
+  font-size: 3rem;
   background: linear-gradient(45deg, #000000 4%, #fff, #000);
   background-clip: text;
   color: transparent;
+}
+
+@media (min-width: 640px) {
+  .card .text {
+    font-size: 4rem;
+  }
 }
 
 .line {
@@ -142,4 +162,70 @@
   right: 10%;
   width: 1px;
   height: 100%;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .bg-black {
+    background: white !important;
+  }
+  
+  .text-white {
+    color: black !important;
+  }
+  
+  .text-neutral-400,
+  .text-neutral-300,
+  .text-gray-400 {
+    color: #666 !important;
+  }
+  
+  .bg-neutral-900\/50,
+  .bg-gray-900\/50 {
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd !important;
+  }
+  
+  .bg-black\/30 {
+    background: #f0f0f0 !important;
+    border: 1px solid #ccc !important;
+  }
+  
+  .border-neutral-800,
+  .border-gray-800 {
+    border-color: #ddd !important;
+  }
+  
+  /* Hide navigation and buttons for print */
+  nav,
+  button {
+    display: none !important;
+  }
+  
+  /* Ensure proper page breaks */
+  .bg-neutral-900\/50,
+  .bg-gray-900\/50 {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+  
+  /* Adjust spacing for print */
+  .space-y-6,
+  .space-y-8 {
+    margin-bottom: 20px;
+  }
+  
+  /* Make text more readable on paper */
+  h1, h2, h3 {
+    color: #333 !important;
+  }
+  
+  p {
+    color: #555 !important;
+  }
 }

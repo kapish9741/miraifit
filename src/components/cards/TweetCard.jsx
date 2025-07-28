@@ -46,11 +46,13 @@ Pre-launch + demo 👇
 
       {/* Embedded Image */}
       <div className="rounded-xl overflow-hidden border border-gray-700">
+        <a href="https://x.com/MiraiFit/status/1949914269794943042">
         <img
           src="thumbnail.png"
           alt="Linear landing page showing 'Linear is a better way to build products' with dashboard interface"
           className="w-full h-auto"
         />
+        </a>
       </div>
     </div>
   )

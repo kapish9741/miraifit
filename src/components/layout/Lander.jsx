@@ -1,10 +1,17 @@
 import React from 'react';
 import { MoveRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import AnimatedCard from '../cards/AnimatedCard'
 
 
 const Lander = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/ai');
+  };
+
   return (
     <>
         <div className="flex flex-col gap-20 lg:flex-row w-full min-h-[60vh] items-center px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
@@ -30,7 +37,10 @@ const Lander = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-4">
-            <button className="uiverse-button-a">
+            <button 
+              className="uiverse-button-a"
+              onClick={handleGetStarted}
+            >
                 <MoveRight />
                 <div className="text">Get Started</div>
             </button>
@@ -41,7 +51,7 @@ const Lander = () => {
             </motion.div>
         </div>
 
-        <div className="w-full lg:w-1/2 flex justify-center items-center lg:mt-0">
+        <div className="w-[90%] lg:w-1/2 flex justify-center items-center lg:mt-0">
             <AnimatedCard />
         </div>
         </div>

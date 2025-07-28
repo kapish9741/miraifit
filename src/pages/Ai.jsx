@@ -514,23 +514,23 @@ const Ai = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
-            <Brain className="w-8 h-8 text-neutral-400" />
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4 flex items-center justify-center gap-3">
+            <Brain className="w-6 h-6 sm:w-8 sm:h-8 text-neutral-400" />
             AI Fitness Planner
           </h1>
-          <p className="text-neutral-400 text-lg">
+          <p className="text-neutral-400 text-base sm:text-lg">
             Get your comprehensive personalized fitness and nutrition plan powered by AI
           </p>
         </div>
 
         {/* Progress Bar */}
-        <div className="mb-8">
-          <div className="flex justify-between items-center mb-4">
-            <span className="text-sm text-neutral-400">Step {currentStep} of 4</span>
-            <span className="text-sm text-neutral-400">{Math.round((currentStep / 4) * 100)}% Complete</span>
+        <div className="mb-6 sm:mb-8">
+          <div className="flex justify-between items-center mb-3 sm:mb-4">
+            <span className="text-xs sm:text-sm text-neutral-400">Step {currentStep} of 4</span>
+            <span className="text-xs sm:text-sm text-neutral-400">{Math.round((currentStep / 4) * 100)}% Complete</span>
           </div>
           <div className="w-full bg-neutral-800 rounded-full h-2">
             <div 
@@ -540,15 +540,15 @@ const Ai = () => {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-8 bg-neutral-900/50 p-8 rounded-2xl backdrop-blur-sm border border-neutral-800">
+        <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8 bg-neutral-900/50 p-4 sm:p-6 lg:p-8 rounded-2xl backdrop-blur-sm border border-neutral-800">
           {renderStep()}
 
-          <div className="flex justify-between pt-6">
+          <div className="flex justify-between pt-4 sm:pt-6">
             {currentStep > 1 && (
               <button
                 type="button"
                 onClick={prevStep}
-                className="px-6 py-3 bg-neutral-800 hover:bg-neutral-700 text-white rounded-lg font-medium transition-colors duration-200"
+                className="px-4 sm:px-6 py-2 sm:py-3 bg-neutral-800 hover:bg-neutral-700 text-white rounded-lg font-medium transition-colors duration-200 text-sm sm:text-base"
               >
                 Previous
               </button>
@@ -558,7 +558,7 @@ const Ai = () => {
               <button
                 type="button"
                 onClick={nextStep}
-                className="px-6 py-3 bg-neutral-700 hover:bg-neutral-600 text-white rounded-lg font-medium transition-colors duration-200 ml-auto"
+                className="px-4 sm:px-6 py-2 sm:py-3 bg-neutral-700 hover:bg-neutral-600 text-white rounded-lg font-medium transition-colors duration-200 text-sm sm:text-base ml-auto"
               >
                 Next
               </button>
@@ -566,16 +566,16 @@ const Ai = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="px-8 py-3 bg-neutral-700 hover:bg-neutral-600 text-white rounded-lg font-medium transition-colors duration-200 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed ml-auto"
+                className="px-6 sm:px-8 py-2 sm:py-3 bg-neutral-700 hover:bg-neutral-600 text-white rounded-lg font-medium transition-colors duration-200 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base ml-auto"
               >
                 {loading ? (
                   <>
-                    <Loader2 className="w-5 h-5 animate-spin" />
+                    <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
                     Generating Plan...
                   </>
                 ) : (
                   <>
-                    <Zap className="w-5 h-5" />
+                    <Zap className="w-4 h-4 sm:w-5 sm:h-5" />
                     Generate My Plan
                   </>
                 )}

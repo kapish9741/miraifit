@@ -1,76 +1,69 @@
-import {React, useState} from 'react';
+import React, { useState } from 'react';
 import BlogCard from '../components/cards/BlogCard';
 
-const categories = ['All', 'Fitness', 'Nutrition', 'Technology', 'Mindset', 'Recovery'];
+const categories = ['All', 'Fitness', 'Nutrition', 'Wellness', 'Technology', 'Tips'];
 
 const posts = [
   {
     id: 1,
-    category: 'Technology',
-    date: 'May 2, 2023',
-    title: 'How AI is Revolutionizing Personal Fitness',
-    description:
-      'Discover how artificial intelligence is transforming the way we approach fitness and health goals.',
-    author: 'Dr. Sarah Johnson',
-    readTime: '5 min read',
-    image: 'https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg',
+    title: "The Science Behind AI-Powered Fitness",
+    description: "Discover how artificial intelligence is revolutionizing personalized fitness training and nutrition planning.",
+    category: "Technology",
+    date: "March 15, 2024",
+    author: "Dr. Sarah Chen",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop"
   },
   {
     id: 2,
-    category: 'Fitness',
-    date: 'April 15, 2023',
-    title: 'The Science Behind Effective Workout Plans',
-    description:
-      'Learn about the scientific principles that make workout plans effective and how to apply them.',
-    author: 'Mike Thompson',
-    readTime: '8 min read',
-    image: 'https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg',
+    title: "10 Essential Nutrients for Muscle Growth",
+    description: "Learn about the key nutrients your body needs to build muscle and recover effectively.",
+    category: "Nutrition",
+    date: "March 12, 2024",
+    author: "Mike Johnson",
+    readTime: "4 min read",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop"
   },
   {
     id: 3,
-    category: 'Nutrition',
-    date: 'March 28, 2023',
-    title: 'Nutrition Myths Debunked by Science',
-    description:
-      'Separating fact from fiction: common nutrition myths that might be holding back your fitness progress.',
-    author: 'Lisa Chen, RD',
-    readTime: '6 min read',
-    image: 'https://images.pexels.com/photos/949129/pexels-photo-949129.jpeg',
+    title: "Building a Sustainable Workout Routine",
+    description: "Tips and strategies for creating a fitness routine that fits your lifestyle and sticks.",
+    category: "Fitness",
+    date: "March 10, 2024",
+    author: "Emma Wilson",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&h=300&fit=crop"
   },
   {
     id: 4,
-    category: 'Mindset',
-    date: 'March 10, 2023',
-    title: 'Building Mental Resilience for Long-Term Fitness',
-    description:
-      'Explore techniques to strengthen your mental game and stay consistent with your fitness routine over time.',
-    author: 'James Keller',
-    readTime: '7 min read',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
+    title: "Mental Health and Physical Fitness",
+    description: "Exploring the powerful connection between exercise and mental well-being.",
+    category: "Wellness",
+    date: "March 8, 2024",
+    author: "Dr. Alex Martinez",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop"
   },
   {
     id: 5,
-    category: 'Recovery',
-    date: 'February 5, 2023',
-    title: 'The Science of Sleep and Muscle Recovery',
-    description:
-      'Learn how proper sleep affects recovery, performance, and gains — and how to improve it.',
-    author: 'Dr. Monica Reyes',
-    readTime: '6 min read',
-    image: 'https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg',
+    title: "Pre-Workout Nutrition Guide",
+    description: "What to eat before your workout to maximize performance and results.",
+    category: "Nutrition",
+    date: "March 5, 2024",
+    author: "Lisa Park",
+    readTime: "4 min read",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop"
   },
   {
     id: 6,
-    category: 'Fitness',
-    date: 'January 20, 2023',
-    title: 'Bodyweight Workouts That Build Muscle',
-    description:
-      'No gym? No problem. Discover powerful bodyweight exercises that effectively develop strength and muscle mass.',
-    author: 'Kevin Park',
-    readTime: '5 min read',
-    image: 'https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg',
+    title: "Recovery Techniques for Athletes",
+    description: "Advanced recovery methods to help you bounce back faster and stronger.",
+    category: "Fitness",
+    date: "March 3, 2024",
+    author: "Tom Davis",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop"
   },
-
   {
     id: 7,
     category: 'Technology',
@@ -131,10 +124,7 @@ const posts = [
     readTime: '5 min read',
     image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg',
   }
-
 ];
-
-
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -145,36 +135,38 @@ const Blog = () => {
       : posts.filter(post => post.category === selectedCategory);
 
   return (
-    <div className="bg-black min-h-screen text-neutral-100 px-6 py-20">
-      <h1 className="text-4xl font-bold mb-2 bg-gradient-to-b from-neutral-300 via-neutral-200 to-neutral-600 bg-clip-text text-transparent">
-        MiraiFit Blogs
-      </h1>
-      <p className="text-neutral-400 mb-6">
-        Expert insights, tips, and the latest research on fitness, nutrition, and wellness.
-      </p>
+    <div className="bg-black min-h-screen text-neutral-100 px-4 sm:px-6 py-12 sm:py-20">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-b from-neutral-300 via-neutral-200 to-neutral-600 bg-clip-text text-transparent">
+          MiraiFit Blogs
+        </h1>
+        <p className="text-neutral-400 mb-6 text-sm sm:text-base">
+          Expert insights, tips, and the latest research on fitness, nutrition, and wellness.
+        </p>
 
-      <div className="flex gap-2 flex-wrap mb-8">
-        {categories.map((category, index) => (
-          <button
-            key={index}
-            onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-1 rounded-full transition ${
-              selectedCategory === category
-                ? 'bg-blue-600 text-neutral-100'
-                : 'bg-neutral-800 text-neutral-300 hover:bg-blue-700'
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+        <div className="flex gap-2 flex-wrap mb-8">
+          {categories.map((category, index) => (
+            <button
+              key={index}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-3 sm:px-4 py-1 sm:py-2 rounded-full transition text-xs sm:text-sm ${
+                selectedCategory === category
+                  ? 'bg-blue-600 text-neutral-100'
+                  : 'bg-neutral-800 text-neutral-300 hover:bg-blue-700'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
 
-      <div className="flex flex-wrap gap-6">
-        {filteredPosts.map(post => (
-          <div key={post.id} className="w-full sm:w-[20vw] md:w-[30vw]">
-            <BlogCard post={post} />
-          </div>
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+          {filteredPosts.map(post => (
+            <div key={post.id} className="w-full">
+              <BlogCard post={post} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
