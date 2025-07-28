@@ -7,7 +7,7 @@ export default function TweetCard() {
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-start space-x-3">
           {/* Profile Picture */}
-          <img src="/placeholder.svg?height=48&width=48" alt="MiraiFit profile" className="h-12 w-12 rounded-full" />
+          <img src="tweet.png" alt="MiraiFit profile" className="h-14 rounded-full" />
 
           {/* User Info */}
           <div>
@@ -47,7 +47,7 @@ Pre-launch + demo 👇
       {/* Embedded Image */}
       <div className="rounded-xl overflow-hidden border border-gray-700">
         <img
-          src="/linear-landing.png"
+          src="thumbnail.png"
           alt="Linear landing page showing 'Linear is a better way to build products' with dashboard interface"
           className="w-full h-auto"
         />

@@ -11,9 +11,9 @@ const timelineItems = [
         </p>
         <div className="mt-6">
           <img
-            src="/placeholder.svg?height=200&width=400"
+            src="https://imgs.search.brave.com/mQSW3PsJbf-G7Za49XB-qwRUbJgZU4iC97n1Shhmg-Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yb2Jv/dGljc2Jpei5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjAv/MDQvS2FpYS1QZXJz/b25hbC1UcmFpbmVy/LTEwMjR4NjM2Lmpw/Zw"
             alt="Miraifit app interface"
-            className="w-full h-32 md:h-48 rounded-lg object-cover shadow-lg"
+            className="w-full rounded-lg object-cover shadow-lg"
           />
         </div>
       </div>
@@ -29,12 +29,12 @@ const timelineItems = [
         </p>
         <div className="grid grid-cols-2 gap-4 mt-6">
           <img
-            src="/placeholder.svg?height=150&width=200"
+            src="https://imgs.search.brave.com/w0vTTn2U7YT_xGMUEYlyvKs2qfgndTOfHox21s2TY40/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmFoaW1haS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjQv/MDgvMi00MC5wbmc"
             alt="Early prototypes"
             className="w-full h-20 md:h-32 rounded-lg object-cover shadow-lg"
           />
           <img
-            src="/placeholder.svg?height=150&width=200"
+            src="https://imgs.search.brave.com/VTrkREVT2fFyj9RdlS8v5-ajU3w24cTfG4GKEGFFKL8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXMu/Y2xvdWRpbmFyeS5j/b20vZHZqZmVteGJ6/L2ltYWdlL3VwbG9h/ZC9jX3NjYWxlLGZf/YXV0byxxXzYwLHdf/MTAwMC9Bc19hX3Jl/c3VsdF9mZWVkYmFj/a19pc19wZXJzb25h/bGlzZWRfbWV0X2Zp/dG5lc3NfYWlfdm9v/cl9wZXJzb25hbF90/cmFpbmluZ193cGwy/Y2FfendlMHNsLmF2/aWY"
             alt="Development process"
             className="w-full h-20 md:h-32 rounded-lg object-cover shadow-lg"
           />
@@ -142,11 +142,25 @@ export default function MiraifitTimeline() {
   return (
     <div className="bg-black min-h-screen">
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-b from-neutral-300 via-neutral-200 to-neutral-700 bg-clip-text text-transparent mb-2">About MiraiFit</h1>
-          <p className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto">
-            Discover the story behind the future of intelligent fitness
-          </p>
+        <div className="text-center mb-16 relative">
+          {/* Background Logo */}
+          <div className="absolute top-[-15vh] inset-0 flex items-center justify-center opacity-80 pointer-events-none">
+            <img 
+              src="/miraifit.png" 
+              alt="Miraifit Logo Background" 
+              className="w-96 h-96 object-contain"
+            />
+          </div>
+          
+          {/* Text with shadow effect */}
+          <div className="relative z-10 bg-[#00000099]">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-b from-neutral-300 via-neutral-200 to-neutral-700 bg-clip-text text-transparent mb-2 shadow-[2px_-25px_28px_0px_rgba(0,_0,_0,_0.7)] backdrop-filter backdrop-blur backdrop-saturate-100 backdrop-contrast-100">
+              About MiraiFit
+            </h1>
+            <p className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+              Discover the story behind the future of intelligent fitness
+            </p>
+          </div>
         </div>
         <Timeline data={timelineItems} />
       </div>

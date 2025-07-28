@@ -48,7 +48,7 @@ const ContactUs = () => {
                 name="name"
                 required
                 placeholder="Your Name"
-                className="w-full bg-neutral-950 border border-neutral-600 text-neutral-100 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full bg-neutral-950 border border-neutral-600 text-neutral-100 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-neutral-400"
               />
             </div>
             <div className="w-full">
@@ -58,7 +58,7 @@ const ContactUs = () => {
                 name="email"
                 required
                 placeholder="you@example.com"
-                className="w-full bg-neutral-950 border border-neutral-600 text-neutral-100 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full bg-neutral-950 border border-neutral-600 text-neutral-100 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-neutral-400"
               />
             </div>
           </div>
@@ -70,7 +70,7 @@ const ContactUs = () => {
               name="message"
               required
               placeholder="Tell us about your project or inquiry..."
-              className="w-full bg-neutral-950 border border-neutral-600 text-neutral-100 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full bg-neutral-950 border border-neutral-600 text-neutral-100 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-neutral-400"
             ></textarea>
           </div>
 
